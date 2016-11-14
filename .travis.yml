@@ -4,15 +4,23 @@ sudo: required
 
 compiler: gcc
 
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++6
+    env: COMPILER=g++-6
+
 before_script:
-  - sudo apt-get update -qq
-  - sudo apt-get install -qq libboost-iostreams-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-test-dev
-  - sudo add-apt-repository ppa:ubuntu-toolchain-r/test
-  - sudo apt-get update
-  - sudo apt-get install gcc-6 g++-6
-  - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 60 --slave /usr/bin/g++ g++ /usr/bin/g++-6
-  - sudo apt-get install software-properties-common
-  - sudo add-apt-repository ppa:george-edison55/cmake-3.x
-  - sudo apt-get update
+#  - sudo apt-get update -qq
+#  - sudo apt-get install -qq libboost-iostreams-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-test-dev
+#  - sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+#  - sudo apt-get update
+#  - sudo apt-get install gcc-6 g++-6
+#  - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 60 --slave /usr/bin/g++ g++ /usr/bin/g++-6
+#  - sudo apt-get install software-properties-common
+#  - sudo add-apt-repository ppa:george-edison55/cmake-3.x
+#  - sudo apt-get update
 
 script: cmake . && make
