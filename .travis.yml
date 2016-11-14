@@ -21,8 +21,6 @@ install:
   - if [ "$CXX" = "g++" ]; then export CXX="g++-6" CC="gcc-6"; fi
 
 before_script:
-  - g++ -v
-  - cmake -version
   - sudo apt-get update -qq
   - sudo apt-get install -qq libboost-iostreams-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-test-dev
 #  - sudo add-apt-repository ppa:ubuntu-toolchain-r/test
