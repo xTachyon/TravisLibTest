@@ -17,6 +17,8 @@ addons:
     env: COMPILER=g++-6
 
 before_script:
+  - echo g++ -v
+  - echo cmake -version
 #  - sudo apt-get update -qq
 #  - sudo apt-get install -qq libboost-iostreams-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-test-dev
 #  - sudo add-apt-repository ppa:ubuntu-toolchain-r/test
