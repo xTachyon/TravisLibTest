@@ -1,4 +1,4 @@
 # TravisLibTest
 
-[[https://travis-ci.com/xTachyon/TravisLibTest.svg?token=zFTuXDP6wpmADxJvPJKB&branch=master]]
-![ScreenShot](https://travis-ci.com/xTachyon/TravisLibTest.svg?token=zFTuXDP6wpmADxJvPJKB&branch=master)
+
+![](https://travis-ci.com/xTachyon/TravisLibTest.svg?token=zFTuXDP6wpmADxJvPJKB&branch=master)
