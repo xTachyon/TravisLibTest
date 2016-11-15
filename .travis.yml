@@ -15,7 +15,6 @@ addons:
       - gcc-6
       - g++-6
       - cmake
-    #env: COMPILER=g++-6
     
 install:
   - if [ "$CXX" = "g++" ]; then export CXX="g++-6" CC="gcc-6"; fi
@@ -30,9 +29,5 @@ before_script:
   - sudo ./bootstrap.sh --prefix=/usr/local
   - sudo ./b2 install -j 8
   - cd ..
-#  - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 40 --slave /usr/bin/g++ g++ /usr/bin/g++-6
-#  - sudo update-alternatives --config gcc
-#  - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 100
-#  - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-6 100
 
 script: cmake . && make
