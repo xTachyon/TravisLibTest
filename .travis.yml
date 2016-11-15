@@ -26,7 +26,7 @@ before_script:
   - tar -xjf boost_1_62_0.tar.bz2
   - cd boost_1_62_0/
   - sudo ./bootstrap.sh --prefix=/usr/local
-  - sudo ./b2 install
+  - sudo ./b2 install -j 8
   - cd ..
   
 #  - sudo apt-get install -qq libboost-iostreams-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-test-dev
