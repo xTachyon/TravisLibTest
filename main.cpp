@@ -21,10 +21,10 @@ int main(int argc, char** argv)
     return 2;
   }
 
-  for (const auto& index : fs::recursive_directory_iterator(path))
+  /*for (const auto& index : fs::recursive_directory_iterator(path))
   {
     std::wcout << index.path().wstring() << L'\n';
-  }
+  }*/
 
   /*int x = 5;
   for (int i = 0; i < sizeof(int); ++i)
