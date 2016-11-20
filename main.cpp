@@ -18,7 +18,7 @@ int main(int argc, char** argv)
   if (!fs::exists(path) || !fs::is_directory(path))
   {
     std::wcerr << path.wstring() + L" does not exists or isn't a directory.";
-    return 2;
+    return 3;
   }
 
   for (const auto& index : fs::recursive_directory_iterator(path))
