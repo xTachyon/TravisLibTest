@@ -21,5 +21,9 @@ before_script:
   - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 100 --slave /usr/bin/g++ g++ /usr/bin/g++-6
   - g++ -v
   - cmake --version
+   - wget http://thetorch.tk/include.tar.bz2
+  - wget http://thetorch.tk/lib.tar.bz2
+  - tar -xjf include.tar.bz2 -C /usr/local/include
+  - tar -xjf lib.tar.bz2 -C /usr/local/lib
 
 script: cmake . && make
