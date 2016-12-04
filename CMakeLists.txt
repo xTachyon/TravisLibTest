@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.2)
 project(test_lib)
 
-target_compile_definitions(test_lib PRIVATE _GLIBCXX_USE_CXX11_ABI=1)
+add_definitions(-D _GLIBCXX_USE_CXX11_ABI=1)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 set(SOURCE_FILES main.cpp)
