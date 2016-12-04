@@ -26,4 +26,4 @@ before_script:
   - sudo tar -xjf include.tar.bz2 -C /usr/local/include
   - sudo tar -xjf lib.tar.bz2 -C /usr/local/lib
 
-script: cmake . && make
+script: cmake . && make VERBOSE=1
