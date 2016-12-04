@@ -12,3 +12,8 @@ if(Boost_FOUND)
     add_executable(test_lib ${SOURCE_FILES})
     target_link_libraries(test_lib ${Boost_LIBRARIES})
 endif()
+
+if (CMAKE_COMPILER_IS_GNUCC)
+    target_link_libraries(test_lib pthread)
+    add_definitions(-D_GLIBCXX_USE_CXX11_ABI=1)
+endif()
