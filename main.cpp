@@ -33,5 +33,5 @@ int main(int argc, char** argv)
   for (int i = 0; i < sizeof(int); ++i)
     std::cout << static_cast<int>(reinterpret_cast<const std::uint8_t*>(&x)[i]) << ' ';
 
-  return 2;
+  return 3;
 }
