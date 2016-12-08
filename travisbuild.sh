@@ -1,6 +1,6 @@
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 100 --slave /usr/bin/g++ g++ /usr/bin/g++-6
-g++ -v
-cmake --version
+#g++ -v
+#cmake --version
 
 if [ ! -f "boost_1_62_0/b2" ]; then
   wget http://kent.dl.sourceforge.net/project/boost/boost/1.62.0/boost_1_62_0.tar.bz2
