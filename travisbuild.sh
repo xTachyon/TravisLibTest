@@ -1,3 +1,4 @@
+set -x
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 100 --slave /usr/bin/g++ g++ /usr/bin/g++-6
 #g++ -v
 #cmake --version
