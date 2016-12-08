@@ -10,5 +10,6 @@ if [ ! -f "boost_1_62_0/b2" ]; then
   sudo ./bootstrap.sh
   sudo ./b2 install -j 8
   cd ..
-  cmake -DBOOST_ROOT=/boost_1_62_0/ . && make
 fi
+
+cmake -DBOOST_ROOT=/boost_1_62_0/ . && make
