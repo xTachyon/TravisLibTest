@@ -12,5 +12,3 @@ if (Boost_FOUND)
     add_executable(test_lib ${SOURCE_FILES})
     target_link_libraries(test_lib ${Boost_LIBRARIES})
 endif()
-
-add_executable(test_lib ${SOURCE_FILES})
