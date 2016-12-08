@@ -17,7 +17,7 @@ addons:
 install:
   - if [ "$CXX" = "g++" ]; then export CXX="g++-6" CC="gcc-6"; fi
 
-before_script: sudo ./travisbuild.sh
+before_script: bash travisbuild.sh
 #  - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 100 --slave /usr/bin/g++ g++ /usr/bin/g++-6
 #  - g++ -v
 #  - cmake --version
