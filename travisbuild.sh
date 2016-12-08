@@ -5,13 +5,13 @@ if [ ! -f "boost_1_62_0/b2" ]; then
   wget http://kent.dl.sourceforge.net/project/boost/boost/1.62.0/boost_1_62_0.tar.bz2
   tar -xjf boost_1_62_0.tar.bz2
   cd boost_1_62_0/
-  sudo ./bootstrap.sh --prefix=libs/boost/
+  sudo ./bootstrap.sh --prefix=../libs/boost/
   sudo ./b2 install -j 8
   cd ..
 fi
 
 cd boost_1_62_0/
-sudo ./bootstrap.sh --prefix=libs/boost/
+sudo ./bootstrap.sh --prefix=../libs/boost/
 sudo ./b2 install -j 8
 cd ..
 
