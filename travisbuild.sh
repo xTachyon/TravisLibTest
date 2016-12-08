@@ -12,4 +12,5 @@ if [ ! -f "boost_1_62_0/b2" ]; then
   cd ..
 fi
 
-cmake -DBOOST_ROOT=boost_1_62_0/ -DBOOST_LIBRARYDIR=boost_1_62_0/stage/lib . && make
+ls boost_1_62_0/
+cmake -DBOOST_ROOT=./boost_1_62_0/ -DBOOST_LIBRARYDIR=./boost_1_62_0/stage/lib . && make
