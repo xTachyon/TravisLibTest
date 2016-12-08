@@ -10,6 +10,11 @@ if [ ! -f "boost_1_62_0/b2" ]; then
   cd ..
 fi
 
+cd boost_1_62_0/
+sudo ./bootstrap.sh --prefix=libs/boost/
+sudo ./b2 install -j 8
+cd ..
+
 ls boost_1_62_0/
 ls libs/boost/
 cmake -DBoost_INCLUDE_DIRS=libs/boost/include/ -DBOOST_LIBRARYDIR=/libs/boost/lib
