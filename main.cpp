@@ -22,5 +22,5 @@ int main(int argc, char** argv)
   for (const auto& index : fs::recursive_directory_iterator(path))
     std::wcout << index.path().wstring() << L'\n';
 
-  return 0;
+  return -1;
 }
