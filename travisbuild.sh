@@ -16,6 +16,8 @@ sudo ./b2 install -j 8
 cd ..
 
 ls boost_1_62_0/
-ls libs/boost/
+ls -l libs/boost/
+ls -l libs/boost/include/
+ls -l libs/boost/lib/
 cmake -DBOOST_INCLUDEDIR=libs/boost/include/ -DBOOST_LIBRARYDIR=/libs/boost/lib
 make
