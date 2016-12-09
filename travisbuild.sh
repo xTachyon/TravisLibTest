@@ -10,14 +10,5 @@ if [ ! -d "libs/boost/lib/" ]; then
   cd ..
 fi
 
-#cd boost_1_62_0/
-#sudo ./bootstrap.sh --prefix=../libs/boost/
-#sudo ./b2 install -j 8
-#cd ..
-
-ls boost_1_62_0/
-ls -l libs/boost/
-ls -l libs/boost/include/
-ls -l libs/boost/lib/
-cmake -DBOOST_INCLUDEDIR=libs/boost/include/ -DBOOST_LIBRARYDIR=/libs/boost/lib
+cmake -DBOOST_INCLUDEDIR=libs/boost/include/ -DBOOST_LIBRARYDIR=/libs/boost/lib/
 make
