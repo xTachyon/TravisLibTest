@@ -5,7 +5,13 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 set(SOURCE_FILES main.cpp)
 
-#set(Boost_USE_STATIC_LIBS ON)
+if("${JSON_REPO_DIR} " STREQUAL " ")
+    message(FATAL_ERROR "Json NOT found")
+else()
+    message(STATUS "Json found : ${JSON_REPO_DIR}/src")
+    include_directories(${JSON_REPO_DIR}/src)
+endif()
+
 find_package(Boost REQUIRED COMPONENTS filesystem iostreams system thread)
 if (Boost_FOUND)
     include_directories(${Boost_INCLUDE_DIRS})
