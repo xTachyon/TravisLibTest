@@ -1,6 +1,7 @@
 #include <iostream>
 #include <boost/filesystem.hpp>
 #include <boost/endian/conversion.hpp>
+#include <json.hpp>
 
 namespace fs = boost::filesystem;
 
