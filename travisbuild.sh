@@ -10,5 +10,15 @@ if [ ! -d "libs/boost/lib/" ]; then
   cd ..
 fi
 
-cmake -DBOOST_INCLUDEDIR=libs/boost/include/ -DBOOST_LIBRARYDIR=/libs/boost/lib/
+if [ -f "libs/json/src/json.hpp" ]; then
+  cd libs/json/
+  git pull
+  cd ../..
+else
+  cd libs/
+  git clone https://github.com/nlohmann/json.git
+  cd ..
+fi
+
+cmake -DBOOST_INCLUDEDIR=libs/boost/include/ -DBOOST_LIBRARYDIR=libs/boost/lib/ -DJSON_REPO_DIR=libs/json/
 make
