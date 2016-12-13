@@ -19,5 +19,5 @@ if (Boost_FOUND)
     target_link_libraries(test_lib ${Boost_LIBRARIES})
 endif()
 
-set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
-message(STATUS "${CMAKE_BINARY_DIR}")
+set (CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_LIST_FILE}/bin")
+message(STATUS "${CMAKE_CURRENT_LIST_FILE}")
