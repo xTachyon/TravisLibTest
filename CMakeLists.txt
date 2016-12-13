@@ -5,6 +5,9 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 set(SOURCE_FILES main.cpp)
 
+set (CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR }/bin")
+message(STATUS "${CMAKE_SOURCE_DIR}")
+
 if("${JSON_REPO_DIR} " STREQUAL " ")
     message(FATAL_ERROR "Json NOT found")
 else()
@@ -18,6 +21,3 @@ if (Boost_FOUND)
     add_executable(test_lib ${SOURCE_FILES})
     target_link_libraries(test_lib ${Boost_LIBRARIES})
 endif()
-
-set (CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_LIST_FILE}/bin")
-message(STATUS "${CMAKE_CURRENT_LIST_FILE}")
