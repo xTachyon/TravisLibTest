@@ -20,7 +20,7 @@ else
   cd ..
 fi
 
-if [ ! -d "libs/openssl-1.0.2g" ]; then
+#if [ ! -d "libs/openssl-1.0.2g" ]; then
   cd libs/
   wget https://www.openssl.org/source/openssl-1.0.2g.tar.gz
   tar -xzf openssl-1.0.2g.tar.gz
@@ -29,7 +29,7 @@ if [ ! -d "libs/openssl-1.0.2g" ]; then
   sudo make install
 #  ./openssl version -v
   cd ../..
-fi
+#fi
 
 cmake -DBOOST_INCLUDEDIR=libs/boost/include/ -DBOOST_LIBRARYDIR=libs/boost/lib/ -DJSON_REPO_DIR=libs/json/ -DOPENSSL_ROOT_DIR=libs/openssl-1.0.2g -DOPENSSL_INCLUDE_DIR=libs/openssl-1.0.2g/include
 make
