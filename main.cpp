@@ -2,6 +2,9 @@
 #include <boost/filesystem.hpp>
 #include <boost/endian/conversion.hpp>
 #include <json.hpp>
+#include <openssl/bio.h>
+#include <openssl/buffer.h>
+#include <openssl/evp.h>
 
 namespace fs = boost::filesystem;
 
@@ -22,6 +25,9 @@ int main(int argc, char** argv)
 
   for (const auto& index : fs::recursive_directory_iterator(path))
     std::wcout << index.path().wstring() << L'\n';
+  
+  const void* p;
+  BIO* bio = BIO_new_mem_buf(p, -1);
 
   return -2;
 }
