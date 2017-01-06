@@ -26,7 +26,7 @@ fi
   tar -xzf openssl-1.0.2g.tar.gz
   cd openssl-1.0.2g
   sudo ./config
-  make depend
+  sudo make depend
   ./openssl version -v
   cd ../..
 #fi
