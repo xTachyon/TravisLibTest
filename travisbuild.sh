@@ -26,10 +26,11 @@ fi
   tar -xzf openssl-1.0.2g.tar.gz
   cd openssl-1.0.2g
   sudo ./config
-  sudo make depend
+  sudo make install
   ./openssl version -v
   cd ../..
 #fi
 
-cmake -DBOOST_INCLUDEDIR=libs/boost/include/ -DBOOST_LIBRARYDIR=libs/boost/lib/ -DJSON_REPO_DIR=libs/json/ -DOPENSSL_ROOT_DIR=libs/openssl-1.0.2g
+cmake -DBOOST_INCLUDEDIR=libs/boost/include/ -DBOOST_LIBRARYDIR=libs/boost/lib/ -DJSON_REPO_DIR=libs/json/ 
+#-DOPENSSL_ROOT_DIR=libs/openssl-1.0.2g
 make
